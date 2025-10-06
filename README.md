@@ -1,64 +1,70 @@
-# docsumm-ai
-One-line document summarizer for PDFs, Word, or text — optimized for context retention, not token count.
+# docsumm-ai  
+**One-line, opinionated document summarizer for PDFs, Word, or text — optimized for context retention, not token count.**
 
-
-[![CI](https://github.com/RohitRajdev/docsumm-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/RohitRajdev/docsumm-ai/actions/workflows/ci.yml)
-![PyPI](https://img.shields.io/badge/pypi-soon-blue)
-![License](https://img.shields.io/badge/license-MIT-informational)
-
-**Audience-aware document summarizer (PDF/DOCX/TXT).**  
-Optimized for context retention, not token count. Generate different summaries for **exec**, **engineer**, or **legal** audiences with one command.
+![CI](https://github.com/RohitRajdev/docsumm-ai/actions/workflows/ci.yml/badge.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11%20|%203.12-blue)
+![Version](https://img.shields.io/badge/version-0.1.0-orange)
 
 ---
 
-## Install
-*(publishing to PyPI next — for now clone/`pip install -e .` or use as a module)*
+## Why docsumm-ai?
+
+Summarizing long documents shouldn’t mean losing meaning.  
+Most tools today **truncate context** just to fit into token limits — resulting in shallow, inaccurate summaries.
+
+`docsumm-ai` was built to fix that.
+
+We designed it for **researchers, analysts, and AI developers** who care about both **fidelity and efficiency**.  
+It automatically adapts to document structure, ensuring retention of key insights from text, Word, or PDFs — in a single line.
+
+---
+
+## What Makes It Different
+
+✅ **One-line summarize()** — clean summaries with context retention  
+✅ **Handles PDFs, DOCX, TXT** — no format left behind  
+✅ **Context-aware chunking** — semantic segmentation, not blind splitting  
+✅ **Adaptive compression** — keeps the right level of detail per section  
+✅ **CLI + Python API** — works both in scripts and terminal  
+✅ **Transparent JSON + Markdown output** — reproducible and human-readable  
+
+---
+
+## Installation
 
 ```bash
-# local dev install
-pip install -U pip
-pip install -e .
+pip install docsumm-ai
 
--------
+## Quickstart
+1. Summarize a text file
+from docsumm_ai import summarize
 
-## Quickstart (CLI)
-docsumm --in path/to/contract.pdf --audience legal --purpose risks --out summary.md
+summary = summarize("annual_report.txt", mode="concise")
+print(summary)
 
------
+2. Summarize a PDF (CLI)
+docsumm summarize my_report.pdf --mode detailed --out summary.md
 
-## Quickstart (Python)
-from docsumm_ai import summarize, SummaryConfig
+## Output Example
 
-text = summarize(
-    "path/to/report.txt",
-    SummaryConfig(audience="exec", purpose="brief")
-)
-print(text)
+Input:
 
------
+“The study explores the correlation between urban growth and environmental impact across 32 global cities…”
 
-## What it does (v0.1)
+Output:
 
-Reads TXT (PDF/DOCX coming next commits)
+“Analyzes 32 cities showing urban expansion drives higher emissions; highlights need for adaptive policies.”
 
-Audience & purpose templates (exec / engineer / legal × brief / risks / actions)
+🪪 License
 
-Returns a clean, bullet-style summary
+MIT License © 2025 Rohit Rajdev
+Open for community collaboration and research integration.
 
-Simple CLI + Python API
+🌐 Links
 
-------
+🔗 GitHub: https://github.com/RohitRajdev/docsumm-ai
 
-## Roadmap
+✉️ Contact: rohitrajdev.com
 
- PDF + DOCX parsing (with structure hints)
-
- Local & API LLM routing (Ollama/OpenAI via extras)
-
- Streamlit app for upload + audience switcher
-
- Evaluation harness and example datasets
-
-## License
-
-MIT © Rohit Rajdev
+🧠 Related project: dataprep-ai
