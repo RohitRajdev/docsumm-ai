@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "docsumm-ai"
-version = "0.1.0"
+version = "0.1.1"
 description = "Audience-aware document summarizer for PDF/DOCX/TXT — optimized for context retention, not token count."
 readme = "README.md"
 requires-python = ">=3.9"
