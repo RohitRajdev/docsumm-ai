@@ -56,7 +56,9 @@ Output:
 
 “Analyzes 32 cities showing urban expansion drives higher emissions; highlights need for adaptive policies.”
 
-🪪 License
+---
+
+## License
 
 MIT License © 2025 Rohit Rajdev
 Open for community collaboration and research integration.
