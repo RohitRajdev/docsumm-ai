@@ -6,12 +6,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: python -m pip install --upgrade pip
-      - run: pip install hatch pytest
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install test/build deps
+        run: pip install hatch pytest
+
       - name: Run tests
-        run: pytest -q
+        run: |
+          export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
+          pytest -q
+
       - name: Build wheel/sdist
         run: hatch build
+
