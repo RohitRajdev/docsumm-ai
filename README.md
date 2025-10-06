@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11%20|%203.12-blue)
 ![Version](https://img.shields.io/badge/version-0.1.1-orange)
-[![Downloads](https://static.pepy.tech/badge/docsumm-ai)](https://pepy.tech/project/docsumm-ai)
+
 
 ---
 
