@@ -19,8 +19,12 @@ Optimized for context retention, not token count. Generate different summaries f
 pip install -U pip
 pip install -e .
 
+-------
+
 ## Quickstart (CLI)
 docsumm --in path/to/contract.pdf --audience legal --purpose risks --out summary.md
+
+-----
 
 ## Quickstart (Python)
 from docsumm_ai import summarize, SummaryConfig
@@ -31,6 +35,8 @@ text = summarize(
 )
 print(text)
 
+-----
+
 ## What it does (v0.1)
 
 Reads TXT (PDF/DOCX coming next commits)
@@ -40,6 +46,8 @@ Audience & purpose templates (exec / engineer / legal × brief / risks / actions
 Returns a clean, bullet-style summary
 
 Simple CLI + Python API
+
+------
 
 ## Roadmap
 
